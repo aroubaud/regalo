@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_204440) do
+ActiveRecord::Schema.define(version: 2018_11_22_171252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "attributes", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "facebook_users", force: :cascade do |t|
+    t.bigint "facebook_id"
+    t.integer "step"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +46,14 @@ ActiveRecord::Schema.define(version: 2018_11_21_204440) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string "text"
+    t.bigint "facebook_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["facebook_user_id"], name: "index_messages_on_facebook_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -53,4 +68,5 @@ ActiveRecord::Schema.define(version: 2018_11_21_204440) do
 
   add_foreign_key "gift_attributes", "attributes"
   add_foreign_key "gift_attributes", "gifts"
+  add_foreign_key "messages", "facebook_users"
 end
