@@ -66,40 +66,23 @@ starwars toy,Foodie,1
 barbie doctor playset,Foodie,1
 books,Foodie,1
 duffle bag,Foodie,1
-chocolate,Party animal,6
-headphones,Party animal,9
-scarf,Party animal,1
-running shoes,Party animal,1
-wine,Party animal,10
-sports tickets,Party animal,9
-ps4 wireless controller,Party animal,1
-winter gloves,Party animal,1
-beanie,Party animal,1
-mug,Party animal,1
-fitness watch,Party animal,1
-yoga set kit,Party animal,1
-socks,Party animal,9
-starwars toy,Party animal,1
-barbie doctor playset,Party animal,1
-books,Party animal,1
-duffle bag,Party animal,7
-chocolate,Couch potatoe,9
-headphones,Couch potatoe,9
-scarf,Couch potatoe,7
-running shoes,Couch potatoe,1
-wine,Couch potatoe,10
-sports tickets,Couch potatoe,7
-ps4 wireless controller,Couch potatoe,10
-winter gloves,Couch potatoe,7
-beanie,Couch potatoe,8
-mug,Couch potatoe,10
-fitness watch,Couch potatoe,8
-yoga set kit,Couch potatoe,9
-socks,Couch potatoe,8
-starwars toy,Couch potatoe,1
-barbie doctor playset,Couch potatoe,1
-books,Couch potatoe,10
-duffle bag,Couch potatoe,7
+chocolate,Outgoing person,1
+headphones,Outgoing person,8
+scarf,Outgoing person,6
+running shoes,Outgoing person,9
+wine,Outgoing person,1
+sports tickets,Outgoing person,9
+ps4 wireless controller,Outgoing person,1
+winter gloves,Outgoing person,1
+beanie,Outgoing person,6
+mug,Outgoing person,1
+fitness watch,Outgoing person,7
+yoga set kit,Outgoing person,6
+socks,Outgoing person,7
+starwars toy,Outgoing person,1
+barbie doctor playset,Outgoing person,1
+books,Outgoing person,1
+duffle bag,Outgoing person,6
 chocolate,Male,1
 headphones,Male,9
 scarf,Male,6
@@ -134,6 +117,23 @@ starwars toy,Female,1
 barbie doctor playset,Female,1
 books,Female,9
 duffle bag,Female,8
+chocolate,Other,10
+headphones,Other,1
+scarf,Other,1
+running shoes,Other,1
+wine,Other,10
+sports tickets,Other,7
+ps4 wireless controller,Other,2
+winter gloves,Other,8
+beanie,Other,8
+mug,Other,1
+fitness watch,Other,1
+yoga set kit,Other,1
+socks,Other,8
+starwars toy,Other,1
+barbie doctor playset,Other,1
+books,Other,8
+duffle bag,Other,1
 chocolate,Friend,10
 headphones,Friend,8
 scarf,Friend,8
@@ -151,6 +151,40 @@ starwars toy,Friend,5
 barbie doctor playset,Friend,5
 books,Friend,9
 duffle bag,Friend,9
+chocolate,Boss,8
+headphones,Boss,1
+scarf,Boss,1
+running shoes,Boss,1
+wine,Boss,10
+sports tickets,Boss,7
+ps4 wireless controller,Boss,1
+winter gloves,Boss,1
+beanie,Boss,1
+mug,Boss,8
+fitness watch,Boss,7
+yoga set kit,Boss,9
+socks,Boss,1
+starwars toy,Boss,1
+barbie doctor playset,Boss,1
+books,Boss,10
+duffle bag,Boss,1
+chocolate,Colleague,10
+headphones,Colleague,7
+scarf,Colleague,7
+running shoes,Colleague,7
+wine,Colleague,10
+sports tickets,Colleague,9
+ps4 wireless controller,Colleague,7
+winter gloves,Colleague,7
+beanie,Colleague,7
+mug,Colleague,7
+fitness watch,Colleague,1
+yoga set kit,Colleague,1
+socks,Colleague,1
+starwars toy,Colleague,1
+barbie doctor playset,Colleague,1
+books,Colleague,10
+duffle bag,Colleague,1
 chocolate,Family,10
 headphones,Family,9
 scarf,Family,10
@@ -168,57 +202,6 @@ starwars toy,Family,1
 barbie doctor playset,Family,1
 books,Family,9
 duffle bag,Family,10
-chocolate,Partner,10
-headphones,Partner,10
-scarf,Partner,8
-running shoes,Partner,9
-wine,Partner,10
-sports tickets,Partner,10
-ps4 wireless controller,Partner,7
-winter gloves,Partner,7
-beanie,Partner,7
-mug,Partner,9
-fitness watch,Partner,9
-yoga set kit,Partner,9
-socks,Partner,9
-starwars toy,Partner,1
-barbie doctor playset,Partner,1
-books,Partner,9
-duffle bag,Partner,10
-chocolate,Coworker,10
-headphones,Coworker,7
-scarf,Coworker,7
-running shoes,Coworker,2
-wine,Coworker,10
-sports tickets,Coworker,8
-ps4 wireless controller,Coworker,2
-winter gloves,Coworker,7
-beanie,Coworker,7
-mug,Coworker,7
-fitness watch,Coworker,2
-yoga set kit,Coworker,7
-socks,Coworker,2
-starwars toy,Coworker,1
-barbie doctor playset,Coworker,1
-books,Coworker,8
-duffle bag,Coworker,7
-chocolate,Acquaintance,10
-headphones,Acquaintance,2
-scarf,Acquaintance,2
-running shoes,Acquaintance,2
-wine,Acquaintance,10
-sports tickets,Acquaintance,2
-ps4 wireless controller,Acquaintance,2
-winter gloves,Acquaintance,2
-beanie,Acquaintance,2
-mug,Acquaintance,9
-fitness watch,Acquaintance,2
-yoga set kit,Acquaintance,2
-socks,Acquaintance,2
-starwars toy,Acquaintance,1
-barbie doctor playset,Acquaintance,1
-books,Acquaintance,7
-duffle bag,Acquaintance,2
 chocolate,Kid,8
 headphones,Kid,1
 scarf,Kid,1
@@ -406,37 +389,20 @@ starwars toy,Christmas,10
 barbie doctor playset,Christmas,10
 books,Christmas,9
 duffle bag,Christmas,10
-chocolate,Officeparty,10
-headphones,Officeparty,1
-scarf,Officeparty,1
-running shoes,Officeparty,1
-wine,Officeparty,10
-sports tickets,Officeparty,1
-ps4 wireless controller,Officeparty,1
-winter gloves,Officeparty,1
-beanie,Officeparty,1
-mug,Officeparty,1
-fitness watch,Officeparty,1
-yoga set kit,Officeparty,1
-socks,Officeparty,1
-starwars toy,Officeparty,1
-barbie doctor playset,Officeparty,1
-books,Officeparty,1
-duffle bag,Officeparty,1
-chocolate,Anniversary,10
-headphones,Anniversary,8
-scarf,Anniversary,1
-running shoes,Anniversary,7
-wine,Anniversary,10
-sports tickets,Anniversary,8
-ps4 wireless controller,Anniversary,1
-winter gloves,Anniversary,1
-beanie,Anniversary,1
-mug,Anniversary,1
-fitness watch,Anniversary,8
-yoga set kit,Anniversary,1
-socks,Anniversary,1
-starwars toy,Anniversary,1
-barbie doctor playset,Anniversary,1
-books,Anniversary,8
-duffle bag,Anniversary,8
+chocolate,Office party,10
+headphones,Office party,1
+scarf,Office party,1
+running shoes,Office party,1
+wine,Office party,10
+sports tickets,Office party,1
+ps4 wireless controller,Office party,1
+winter gloves,Office party,1
+beanie,Office party,1
+mug,Office party,1
+fitness watch,Office party,1
+yoga set kit,Office party,1
+socks,Office party,1
+starwars toy,Office party,1
+barbie doctor playset,Office party,1
+books,Office party,1
+duffle bag,Office party,1
