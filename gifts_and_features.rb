@@ -1,4 +1,4 @@
-ATTRIBUTES = [
+FEATURES = [
   { name: 'Sports' },
   { name: 'Techie' },
   { name: 'Fashionista' },
