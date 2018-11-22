@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_171252) do
+ActiveRecord::Schema.define(version: 2018_11_22_213725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_171252) do
     t.bigint "facebook_user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "question_id"
     t.index ["facebook_user_id"], name: "index_messages_on_facebook_user_id"
   end
 
