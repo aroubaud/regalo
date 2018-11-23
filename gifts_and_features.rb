@@ -1,16 +1,17 @@
-ATTRIBUTES = [
+FEATURES = [
   { name: 'Sports' },
   { name: 'Techie' },
   { name: 'Fashionista' },
   { name: 'Foodie' },
-  { name: 'Outgoing person' },
+  { name: 'Party animal' },
+  { name: 'Couch potatoe' },
   { name: 'Male' },
   { name: 'Female' },
-  { name: 'Other' },
   { name: 'Friend' },
-  { name: 'Boss' },
-  { name: 'Colleague' },
   { name: 'Family' },
+  { name: 'Partner' },
+  { name: 'Coworker' },
+  { name: 'Acquaintance' }, # We also need acquaintance and partner
   { name: 'Kid' },
   { name: 'Teen' },
   { name: 'Young adult' },
@@ -22,7 +23,9 @@ ATTRIBUTES = [
   { name: 'Graduation' },
   { name: 'Babyshower' },
   { name: 'Christmas' },
-  { name: 'Office party' }
+  { name: 'Officeparty' },
+  { name: 'Anniversary' },
+  # Check to have complete list
 ]
 
 GIFTS = [
