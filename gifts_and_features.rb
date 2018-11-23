@@ -55,4 +55,12 @@ GIFTS = [
   { name: 'Throw pillow', description:'gray, yellow, and black throw pillow on gray suede couch', price: 14, image:"pillow" },
   { name: 'Camera vintage', description:'black and gray film camera', price: 50, image:"canon_camera" },
   { name: 'Timberland shoes', description: 'Timberland Teddy Fleece Waterproof ', price: 140, image:"women_shoes" },
+  {name: 'Wind Chimes', description: 'Outdoor Living Wind Chimes Yard Garden Tubes Bells Copper Home Craft Decor Gifts', price: 10, image: ""},
+  {name: 'Art Glass', description: 'Purple Yellow Flower Art Glass Bird Bath Feeder NEW garden centerpiece bowl', price: 75, image: "birdbath"},
+  {name: 'Hammock', description: 'Sunnydaze 2-Person Quilted Spreader Bar Hammock and 12-Foot Stand - Melon Stripe', price: 150, image:"hammock"},
+  {name: 'Bamboo MUG', description: 'STAINLESS STEEL Coffee & Tea Present,Travel', price: 30, image: "mugbamboo"},
+  {name: 'Christmas Bowl', description: 'Non-alcoholic yet full flavored red wine Fermented and aged in the traditional red wine method Alcohol is gently removed ', price: 20, image:"glass" },
+  {name: 'Shallow Bowl', description:'Intricately woven antique gold-tone a beautifully striking addition to your tabletop. ', price: 160, image:"Shallow_Bowl"},
+  {name: 'Canon Camera', description:'Canon EOS 200D 24.2 MP Digital SLR Camera with 18-55mm EF-S f/3.5-5.6 Lens ', price: 60, image:"cannon"},
 ]
+
