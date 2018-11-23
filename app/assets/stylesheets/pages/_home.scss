@@ -76,6 +76,28 @@ h1, h2, h3, p {
   text-decoration: none;
 }
 
+.button_start {
+  background: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 3px;
+  height: 45px;
+  width: 120px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 55px;
+}
+
+.button_start:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
 a {
   text-align: center;
   padding: 5px;
