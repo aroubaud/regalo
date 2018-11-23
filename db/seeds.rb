@@ -30,7 +30,7 @@ CSV.foreach(csv_file_path) do |row|
   feature_object = Feature.find_by(name: feature_name)
 
   # Once you generated the gift attribute model
-  GiftFeature.create({ gift: gift_object, feature_id: feature_object.id, strength: strength })
+  GiftFeature.create!({ gift: gift_object, feature_id: feature_object.id, strength: strength })
 end
 
 
