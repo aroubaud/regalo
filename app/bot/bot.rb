@@ -412,85 +412,87 @@ Bot.on :message do |message|
     ### User & gift distance score ###
     results = gifts.map do |gift|
 
-      gift_birthday = gift.gift_features.joins(:feature).find_by(features: { name: "Birthday" }).strength
+      p gift
+
+      gift_birthday = gift.gift_features.joins(:feature).find_by(features: { name: "birthday" }).strength
       birthday_distance = (gift_birthday - birthday).abs
 
-      gift_party = gift.gift_features.joins(:feature).find_by(features: { name: "Party" }).strength
+      gift_party = gift.gift_features.joins(:feature).find_by(features: { name: "party" }).strength
       party_distance = (gift_party - party).abs
 
-      gift_anniversary = gift.gift_features.joins(:feature).find_by(features: { name: "Anniversary" }).strength
+      gift_anniversary = gift.gift_features.joins(:feature).find_by(features: { name: "anniversary" }).strength
       anniversary_distance = (gift_anniversary - anniversary).abs
 
-      gift_wedding = gift.gift_features.joins(:feature).find_by(features: { name: "Wedding" }).strength
+      gift_wedding = gift.gift_features.joins(:feature).find_by(features: { name: "wedding" }).strength
       wedding_distance = (gift_wedding - wedding).abs
 
-      gift_graduation = gift.gift_features.joins(:feature).find_by(features: { name: "Graduation" }).strength
+      gift_graduation = gift.gift_features.joins(:feature).find_by(features: { name: "graduation" }).strength
       graduation_distance = (gift_graduation - graduation).abs
 
-      gift_babyshower = gift.gift_features.joins(:feature).find_by(features: { name: "Babyshower" }).strength
+      gift_babyshower = gift.gift_features.joins(:feature).find_by(features: { name: "babyshower" }).strength
       babyshower_distance = (gift_babyshower - babyshower).abs
 
-      gift_christmas = gift.gift_features.joins(:feature).find_by(features: { name: "Christmas" }).strength
+      gift_christmas = gift.gift_features.joins(:feature).find_by(features: { name: "christmas" }).strength
       christmas_distance = (gift_christmas - christmas).abs
 
-      gift_housewarming = gift.gift_features.joins(:feature).find_by(features: { name: "Housewarming" }).strength
+      gift_housewarming = gift.gift_features.joins(:feature).find_by(features: { name: "housewarming" }).strength
       housewarming_distance = (gift_housewarming - housewarming).abs
 
-      gift_officeparty = gift.gift_features.joins(:feature).find_by(features: { name: "Officeparty" }).strength
+      gift_officeparty = gift.gift_features.joins(:feature).find_by(features: { name: "officeparty" }).strength
       officeparty_distance = (gift_officeparty - officeparty).abs
 
-      gift_friend = gift.gift_features.joins(:feature).find_by(features: { name: "Friend" }).strength
+      gift_friend = gift.gift_features.joins(:feature).find_by(features: { name: "friend" }).strength
       friend_distance = (gift_friend - friend).abs
 
-      gift_family = gift.gift_features.joins(:feature).find_by(features: { name: "Family" }).strength
+      gift_family = gift.gift_features.joins(:feature).find_by(features: { name: "family" }).strength
       family_distance = (gift_family - family).abs
 
-      gift_partner = gift.gift_features.joins(:feature).find_by(features: { name: "Partner" }).strength
+      gift_partner = gift.gift_features.joins(:feature).find_by(features: { name: "partner" }).strength
       partner_distance = (gift_partner - partner).abs
 
-      gift_coworker = gift.gift_features.joins(:feature).find_by(features: { name: "Coworker" }).strength
+      gift_coworker = gift.gift_features.joins(:feature).find_by(features: { name: "coworker" }).strength
       coworker_distance = (gift_coworker - coworker).abs
 
-      gift_acquaintance = gift.gift_features.joins(:feature).find_by(features: { name: "Acquaintance" }).strength
+      gift_acquaintance = gift.gift_features.joins(:feature).find_by(features: { name: "acquaintance" }).strength
       acquaintance_distance = (gift_acquaintance - acquaintance).abs
 
-      gift_kid = gift.gift_features.joins(:feature).find_by(features: { name: "Kid" }).strength
+      gift_kid = gift.gift_features.joins(:feature).find_by(features: { name: "kid" }).strength
       kid_distance = (gift_kid - kid).abs
 
-      gift_teen = gift.gift_features.joins(:feature).find_by(features: { name: "Teen" }).strength
+      gift_teen = gift.gift_features.joins(:feature).find_by(features: { name: "teen" }).strength
       teen_distance = (gift_teen - teen).abs
 
-      gift_young_adult = gift.gift_features.joins(:feature).find_by(features: { name: "Young adult" }).strength
+      gift_young_adult = gift.gift_features.joins(:feature).find_by(features: { name: "young adult" }).strength
       young_adult_distance = (gift_young_adult - young_adult).abs
 
-      gift_adult = gift.gift_features.joins(:feature).find_by(features: { name: "Adult" }).strength
+      gift_adult = gift.gift_features.joins(:feature).find_by(features: { name: "adult" }).strength
       adult_distance = (gift_adult - adult).abs
 
-      gift_elderly = gift.gift_features.joins(:feature).find_by(features: { name: "Elderly" }).strength
+      gift_elderly = gift.gift_features.joins(:feature).find_by(features: { name: "elderly" }).strength
       elderly_distance = (gift_elderly - elderly).abs
 
-      gift_male = gift.gift_features.joins(:feature).find_by(features: { name: "Male" }).strength
+      gift_male = gift.gift_features.joins(:feature).find_by(features: { name: "male" }).strength
       male_distance = (gift_male - male).abs
 
-      gift_female = gift.gift_features.joins(:feature).find_by(features: { name: "Female" }).strength
+      gift_female = gift.gift_features.joins(:feature).find_by(features: { name: "female" }).strength
       female_distance = (gift_female - female).abs
 
-      gift_outgoing = gift.gift_features.joins(:feature).find_by(features: { name: "Outgoing" }).strength
+      gift_outgoing = gift.gift_features.joins(:feature).find_by(features: { name: "outgoing" }).strength
       outgoing_distance = (gift_outgoing - outgoing).abs
 
-      gift_practicality = gift.gift_features.joins(:feature).find_by(features: { name: "Practicality" }).strength
+      gift_practicality = gift.gift_features.joins(:feature).find_by(features: { name: "practicality" }).strength
       practicality_distance = (gift_practicality - practicality).abs
 
-      gift_foodie = gift.gift_features.joins(:feature).find_by(features: { name: "Foodie" }).strength
+      gift_foodie = gift.gift_features.joins(:feature).find_by(features: { name: "foodie" }).strength
       foodie_distance = (gift_foodie - foodie).abs
 
-      gift_techie = gift.gift_features.joins(:feature).find_by(features: { name: "Techie" }).strength
+      gift_techie = gift.gift_features.joins(:feature).find_by(features: { name: "techie" }).strength
       techie_distance = (gift_techie - techie).abs
 
-      gift_fashionista = gift.gift_features.joins(:feature).find_by(features: { name: "Fashionista" }).strength
+      gift_fashionista = gift.gift_features.joins(:feature).find_by(features: { name: "fashionista" }).strength
       fashionista_distance = (gift_fashionista - fashionista).abs
 
-      gift_sports = gift.gift_features.joins(:feature).find_by(features: { name: "Sports" }).strength
+      gift_sports = gift.gift_features.joins(:feature).find_by(features: { name: "sports" }).strength
       sports_distance = (gift_sports - sports).abs
 
       total_distance = birthday_distance + party_distance + anniversary_distance + wedding_distance + graduation_distance + babyshower_distance + christmas_distance + housewarming_distance + officeparty_distance + friend_distance + family_distance + partner_distance + coworker_distance + acquaintance_distance + kid_distance + teen_distance + young_adult_distance + adult_distance + elderly_distance + male_distance + female_distance + outgoing_distance + practicality_distance + foodie_distance + techie_distance + fashionista_distance + sports_distance
@@ -499,7 +501,7 @@ Bot.on :message do |message|
     end
 
     ### final suggestion ###
-    result = results.sort_by {|result| result.distance}.first
+    result = results.sort_by {|result| result[:distance]}.first
 
     message.reply(text: "https://regalo-app.herokuapp.com/gifts/#{result[:gift].id}")
   end

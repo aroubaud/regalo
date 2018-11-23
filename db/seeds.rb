@@ -7,11 +7,13 @@ Feature.destroy_all
 
 # Create attributes
 FEATURES.each do |feature|
+  feature[:name].downcase!
   Feature.create!(feature)
 end
 
 # Create gifts
 GIFTS.each do |gift|
+  gift[:name].downcase!
   Gift.create!(gift)
 end
 
@@ -20,11 +22,11 @@ csv_file_path = "gift_features.csv"
 # Read from that CSV file (parsing)
 # Create "gift attributes"
 CSV.foreach(csv_file_path) do |row|
-  p row
-  gift_name = row[0]
-  feature_name = row[1]
+  gift_name = row[0].downcase
+  feature_name = row[1].downcase
   strength = row[2].to_i
 
+  p gift_name
   gift_object = Gift.find_by(name: gift_name)
   p feature_name
   feature_object = Feature.find_by(name: feature_name)

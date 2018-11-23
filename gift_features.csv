@@ -11,8 +11,8 @@ mug,Sports,1
 fitness watch,Sports,10
 yoga set kit,Sports,8
 socks,Sports,7
-starwars toy,Sports,1
-barbie doctor playset,Sports,1
+star wars toy,Sports,1
+doll,Sports,1
 books,Sports,1
 duffle bag,Sports,8
 Amazing necklace,Sports,1
@@ -43,8 +43,8 @@ mug,Techie,1
 fitness watch,Techie,9
 yoga set kit,Techie,1
 socks,Techie,1
-starwars toy,Techie,1
-barbie doctor playset,Techie,1
+star wars toy,Techie,1
+doll,Techie,1
 books,Techie,1
 duffle bag,Techie,1
 Amazing necklace,Techie,1
@@ -75,8 +75,8 @@ mug,Fashionista,7
 fitness watch,Fashionista,1
 yoga set kit,Fashionista,1
 socks,Fashionista,10
-starwars toy,Fashionista,1
-barbie doctor playset,Fashionista,1
+star wars toy,Fashionista,1
+doll,Fashionista,1
 books,Fashionista,1
 duffle bag,Fashionista,10
 Amazing necklace,Fashionista,10
@@ -107,8 +107,8 @@ mug,Foodie,8
 fitness watch,Foodie,8
 yoga set kit,Foodie,1
 socks,Foodie,1
-starwars toy,Foodie,1
-barbie doctor playset,Foodie,1
+star wars toy,Foodie,1
+doll,Foodie,1
 books,Foodie,1
 duffle bag,Foodie,1
 Amazing necklace,Foodie,1
@@ -171,8 +171,8 @@ mug,Male,5
 fitness watch,Male,5
 yoga set kit,Male,4
 socks,Male,7
-starwars toy,Male,5
-barbie doctor playset,Male,5
+star wars toy,Male,5
+doll,Male,5
 books,Male,5
 duffle bag,Male,7
 Amazing necklace,Male,0
@@ -203,8 +203,8 @@ mug,Female,5
 fitness watch,Female,5
 yoga set kit,Female,6
 socks,Female,3
-starwars toy,Female,5
-barbie doctor playset,Female,5
+star wars toy,Female,5
+doll,Female,5
 books,Female,5
 duffle bag,Female,3
 Amazing necklace,Female,10
@@ -235,8 +235,8 @@ mug,Friend,8
 fitness watch,Friend,8
 yoga set kit,Friend,8
 socks,Friend,8
-starwars toy,Friend,5
-barbie doctor playset,Friend,5
+star wars toy,Friend,5
+doll,Friend,5
 books,Friend,9
 duffle bag,Friend,9
 Amazing necklace,Friend,10
@@ -267,8 +267,8 @@ mug,Family,10
 fitness watch,Family,10
 yoga set kit,Family,9
 socks,Family,10
-starwars toy,Family,1
-barbie doctor playset,Family,1
+star wars toy,Family,1
+doll,Family,1
 books,Family,9
 duffle bag,Family,10
 Amazing necklace,Family,10
@@ -299,8 +299,8 @@ mug,Partner,9
 fitness watch,Partner,9
 yoga set kit,Partner,9
 socks,Partner,9
-starwars toy,Partner,1
-barbie doctor playset,Partner,1
+star wars toy,Partner,1
+doll,Partner,1
 books,Partner,9
 duffle bag,Partner,10
 Amazing necklace,Partner,10
@@ -331,8 +331,8 @@ mug,Coworker,7
 fitness watch,Coworker,2
 yoga set kit,Coworker,7
 socks,Coworker,2
-starwars toy,Coworker,1
-barbie doctor playset,Coworker,1
+star wars toy,Coworker,1
+doll,Coworker,1
 books,Coworker,8
 duffle bag,Coworker,7
 Amazing necklace,Coworker,7
