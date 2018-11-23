@@ -56,6 +56,19 @@ ActiveRecord::Schema.define(version: 2018_11_22_220901) do
     t.index ["facebook_user_id"], name: "index_messages_on_facebook_user_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer "amount"
+    t.string "adress"
+    t.integer "unit"
+    t.string "postal_code"
+    t.string "city"
+    t.string "country"
+    t.string "province"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
