@@ -5,6 +5,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'facebook-messenger'
 gem 'carrierwave', '~> 1.2'
+gem 'money-rails'
 
 gem 'bootsnap', require: false
 gem 'devise'
