@@ -15,6 +15,7 @@ Bot.on :message do |message|
   if message.text == "bye"
     fb_user.step = 0
     fb_user.save
+    Message.destroy_all
     next
   end
 
@@ -27,7 +28,7 @@ Bot.on :message do |message|
     fb_user.save
   when 1
     unless message.text =~ /\D/
-      Message.create(facebook_user_id: fb_user.id, text: message.text)
+      Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 1)
       fb_user.step += 1
       fb_user.save
       message.typing_on
@@ -85,7 +86,7 @@ Bot.on :message do |message|
       message.reply(text: "Please enter a number 😊")
     end
   when 2
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 2)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -124,7 +125,7 @@ Bot.on :message do |message|
         ]
       )
   when 3
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 3)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -159,7 +160,7 @@ Bot.on :message do |message|
         ]
       )
   when 4
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 4)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -189,7 +190,7 @@ Bot.on :message do |message|
         ]
       )
   when 5
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 5)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -216,7 +217,7 @@ Bot.on :message do |message|
         ]
       )
   when 6
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 6)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -236,7 +237,7 @@ Bot.on :message do |message|
         ]
       )
   when 7
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 7)
     fb_user.step += 1
     fb_user.save
     message.typing_on
@@ -268,9 +269,23 @@ Bot.on :message do |message|
         ]
       )
   when 8
-    Message.create(facebook_user_id: fb_user.id, text: message.text)
+    Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 8)
     fb_user.step += 1
     fb_user.save
     message.reply(text: "Yay! I think I got what you need...")
   end
 end
+
+############### Gift Recommendation Algorithm #########################
+
+# budget = fb_user.messages[0].text.to_i
+
+
+
+
+
+
+
+
+
+
