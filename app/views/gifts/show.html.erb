@@ -1,19 +1,20 @@
-<%= cl_image_tag @gift.image %>
 <div class="gift-details">
-  <h1><%= @gift.name %></h1>
-  <p><%= @gift.description %></p>
-  <p><%= @gift.price %></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <h1><%= @gift.name.capitalize %></h1>
+        <p><%= @gift.description.capitalize %></p>
+        <p>$<%= @gift.price %></p>
+        <a class="button_start" href="">Order now</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
 
-<html>
-<body>
 
-<button type="button">ORDER NOW</button>
-
-
-</body>
-</html>
 
