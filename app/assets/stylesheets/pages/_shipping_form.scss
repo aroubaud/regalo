@@ -1,0 +1,35 @@
+.shipping_button {
+  background: #393E46;
+  color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 45px;
+  width: 420px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 55px;
+}
+
+.shipping_button:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+#new_order{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+  
+  .form-control-label{
+    min-width: 120px !important;
+  }
+
+}
+
