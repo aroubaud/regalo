@@ -42,10 +42,13 @@ h1, h2, h3, p {
 
 .form-control {
   height: 35px;
-  width: 300px;
+  width: 400px;
   background: transparent;
   border: 1px solid white;
 }
+// #user_email .form-control {
+//   width: 400px;
+// }
 
 .form-control::-webkit-input-placeholder {
   color: white;
