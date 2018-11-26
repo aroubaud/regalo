@@ -7,10 +7,8 @@
         <h1><%= @gift.name.capitalize %></h1>
         <p><%= @gift.description.capitalize %></p>
         <p>Amount: <%= humanized_money_with_symbol(@gift.price) %></p>
-        <%= form_tag orders_path do %>
-          <%= hidden_field_tag 'gift_id', @gift.id %>
-          <%= submit_tag 'Order now', class: 'btn btn-primary' %>
-        <% end %>
+        <%= cl_image_tag @gift.image %>
+        <%= link_to 'Order now', new_gift_order_path(@gift), class: 'btn btn-primary' %>
       </div>
     </div>
   </div>

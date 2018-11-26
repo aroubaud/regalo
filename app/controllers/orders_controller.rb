@@ -1,11 +1,12 @@
 class OrdersController < ApplicationController
   def new
-    gift = Gift.find(params[:gift_id])
-    order = Order.new
+    @gift = Gift.find(params[:gift_id])
+    @order = Order.new
   end
 
   def create
-    order = Order.create!(booking_params.merge(gift_sku: gift.sku, amount: gift.price, state: 'Pending', user: current_user))
+    gift = Gift.find(params[:gift_id])
+    order = Order.create!(order_params.merge(gift_sku: gift.sku, amount: gift.price, state: 'Pending', user: current_user))
     redirect_to new_order_payment_path(order)
   end
 
