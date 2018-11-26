@@ -1,6 +1,7 @@
 require 'facebook/messenger'
 
 include Facebook::Messenger
+include CloudinaryHelper
 
 # Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
@@ -25,7 +26,7 @@ Bot.on :message do |message|
     message.mark_seen
     message.reply(text: "Hey there! 👋 My name is Rose - I'm here to help you find the right gift for your next event 🎁")
     message.typing_on
-    message.reply(text: "Let's start with your maximum budget so you don't break the bank 💳")
+    message.reply(text: "Let's start with your maximum budget so you don't break the bank 💳 Please type a number")
     fb_user.step += 1
     fb_user.save
   when 1
@@ -36,7 +37,7 @@ Bot.on :message do |message|
       fb_user.save
       message.typing_on
       message.reply(
-        text: "Awesome! What event are you going to? 🎉",
+        text: "Awesome! What event is this gift for? 🎉",
         quick_replies: [
           {
             content_type: 'text',
@@ -96,105 +97,105 @@ Bot.on :message do |message|
     message.typing_on
     message.reply(text: "Great! Let's make your gift more personal 😍")
     message.typing_on
-    message.reply(text: "I will just need a bit more information...")
+    message.reply(text: "I'll just need some more information about the recipient...")
     message.typing_on
-      message.reply(
-        text: "How close are you to this person? 👥",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Friend',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Family',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Partner',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Coworker',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Acquaintance',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "First, how would you describe your relationship? 👥",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Friend',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Family',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Partner',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Coworker',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Acquaintance',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 3
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 3)
     fb_user.step += 1
     fb_user.save
     message.typing_on
-      message.reply(
-        text: "What group best represents the recipient? 👨‍👩‍👧‍👦",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Kid',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Teen',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Young adult',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Adult',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Elderly',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "Based on age, which group is the best fit? 👨‍👩‍👧‍👦",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Kid',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Teen',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Young adult',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Adult',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Elderly',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 4
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 4)
     fb_user.step += 1
     fb_user.save
     message.typing_on
-      message.reply(
-        text: "What is the gender of the recipient?",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Male ♂️',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Female ♀️',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Other',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Prefer not to say',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "What's their gender?",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Male ♂️',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Female ♀️',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Other',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Prefer not to say',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 5
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 5)
@@ -203,86 +204,85 @@ Bot.on :message do |message|
     message.typing_on
     message.reply(text: "Almost done! Just need a few more details 👌")
     message.typing_on
-      message.reply(
-        text: "Is the recipient a...",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Party animal 🌟',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Couch potatoe 💤',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'No freakin clue ⁉️',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "Would you say they're a...",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Party animal 🌟',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Couch potatoe 💤',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'No freakin clue ⁉️',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 6
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 6)
     fb_user.step += 1
     fb_user.save
     message.typing_on
-      message.reply(
-        text: "Is the person practical? 🛠️",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Yes',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Not really',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "Is the person practical? 🛠️",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Yes',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Not really',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 7
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 7)
     fb_user.step += 1
     fb_user.save
     message.typing_on
-    message.reply(text: "And here's the last question 😃")
-    message.typing_on
-      message.reply(
-        text: "What team would the recipient choose?",
-        quick_replies: [
-          {
-            content_type: 'text',
-            title: 'Foodie 🍰',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Techie 💻',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Fashionista 💃',
-            payload: 'HARMLESS'
-          },
-          {
-            content_type: 'text',
-            title: 'Sports 🏈',
-            payload: 'HARMLESS'
-          }
-        ]
-      )
+    message.reply(
+      text: "And finally, which of these categories would the recipient best fit in...",
+      quick_replies: [
+        {
+          content_type: 'text',
+          title: 'Foodie 🍰',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Techie 💻',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Fashionista 💃',
+          payload: 'HARMLESS'
+        },
+        {
+          content_type: 'text',
+          title: 'Sports 🏈',
+          payload: 'HARMLESS'
+        }
+      ]
+    )
   when 8
     message.mark_seen
     Message.create(facebook_user_id: fb_user.id, text: message.text, question_id: 8)
     fb_user.step += 1
     fb_user.save
-    message.reply(text: "Yay! I think I got what you need...")
+    message.reply(text: "Done! Based on everything you've told me, here's an awesome gift I'd recommend...")
+    message.typing_on
 
     ############### Gift Recommendation Algorithm #########################
 
@@ -297,7 +297,7 @@ Bot.on :message do |message|
     answer_8 = fb_user.messages.where(question_id: 8)[0].text
 
     ### Filter gifts by budget ###
-    gifts = Gift.where("price < ?", budget)
+    gifts = Gift.where("price_cents < ?", budget * 100)
 
     ### Answers score ###
 
@@ -412,8 +412,6 @@ Bot.on :message do |message|
     ### User & gift distance score ###
     results = gifts.map do |gift|
 
-      p gift
-
       gift_birthday = gift.gift_features.joins(:feature).find_by(features: { name: "birthday" }).strength
       birthday_distance = (gift_birthday - birthday).abs
 
@@ -503,6 +501,14 @@ Bot.on :message do |message|
     ### final suggestion ###
     result = results.sort_by {|result| result[:distance]}.first
 
-    message.reply(text: "https://regalo-app.herokuapp.com/gifts/#{result[:gift].id}")
+    message.reply(
+      attachment: {
+        type: 'image',
+        payload: {
+          url: cl_image_path(result[:gift].image)
+        }
+      }
+    )
+    message.reply(text: "http://www.regaloapp.io/gifts/#{result[:gift].id}")
   end
 end
