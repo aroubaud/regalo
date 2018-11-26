@@ -6,8 +6,11 @@
       <div class="col-xs-12 col-md-6">
         <h1><%= @gift.name.capitalize %></h1>
         <p><%= @gift.description.capitalize %></p>
-        <p>$<%= @gift.price %></p>
-        <a class="button_start" href="">Order now</a>
+        <p>Amount: <%= humanized_money_with_symbol(@gift.price) %></p>
+        <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'gift_id', @gift.id %>
+          <%= submit_tag 'Order now', class: 'btn btn-primary' %>
+        <% end %>
       </div>
     </div>
   </div>

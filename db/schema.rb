@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_23_164439) do
+ActiveRecord::Schema.define(version: 2018_11_24_202144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +41,11 @@ ActiveRecord::Schema.define(version: 2018_11_23_164439) do
   create_table "gifts", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.integer "price_cents", default: 0, null: false
+    t.string "sku"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -54,6 +55,22 @@ ActiveRecord::Schema.define(version: 2018_11_23_164439) do
     t.datetime "updated_at", null: false
     t.integer "question_id"
     t.index ["facebook_user_id"], name: "index_messages_on_facebook_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "gift_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.json "payment"
+    t.string "address"
+    t.integer "unit"
+    t.string "postal_code"
+    t.string "city"
+    t.string "country"
+    t.string "province"
+    t.string "phone_number"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,4 +88,5 @@ ActiveRecord::Schema.define(version: 2018_11_23_164439) do
   add_foreign_key "gift_features", "features"
   add_foreign_key "gift_features", "gifts"
   add_foreign_key "messages", "facebook_users"
+  add_foreign_key "orders", "users"
 end
