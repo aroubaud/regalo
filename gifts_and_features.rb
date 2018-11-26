@@ -30,7 +30,7 @@ FEATURES = [
 ]
 
 GIFTS = [
-  { name: 'chocolate', description: 'sweet natural chocolate', price: 10, image: "chocolats" },
+  { name: 'chocolate', description: 'sweet natural chocolate', price: 10, image: "chocolats", sku: "chocolate"},
   { name: 'headphones', description: 'beats by Dre', price: 100, image: "headphones" },
   { name: 'scarf', description: 'gucci pretty', price: 80, image:"scarf" },
   { name: 'running shoes', description: 'dope nikerush', price: 100, image: "nike_shoe" },
