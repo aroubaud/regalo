@@ -1,4 +1,4 @@
-<div class="text-center">
+
 <%= simple_form_for [@gift, @order] do |f| %>
   <%= f.input :address %>
   <%= f.input :unit %>
@@ -7,6 +7,5 @@
   <%= f.input :province %>
   <%# f.input :country %>
   <%# f.input :phone_number %>
-  <%= f.button :submit, class: "button_start" %>
+  <%= f.button :submit, class: "shipping_button" %>
 <% end %>
-</div>
