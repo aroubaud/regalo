@@ -1,0 +1,12 @@
+<div class="text-center">
+<%= simple_form_for @order do |f| %>
+  <%= f.input :address %>
+  <%= f.input :unit %>
+  <%= f.input :postal_code %>
+  <%= f.input :city %>
+  <%= f.input :province %>
+  <%= f.input :country %>
+  <%= f.input :phone_number %>
+  <%= f.button :submit, class: "button_start" %>
+<% end %>
+</div>
