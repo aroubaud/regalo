@@ -1,0 +1,32 @@
+// .form-signup {
+//   border: 1px solid black;
+// }
+//   background: #393E46;
+//   color: white;
+//
+//   border-radius: 3px;
+//   height: 45px;
+//   width: 400px;
+//   text-decoration: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-left: 5px;
+//   margin-top: 55px;
+// }
+
+.btn {
+  border: 1px solid black;
+
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+#login {
+  text-align: center;
+}
