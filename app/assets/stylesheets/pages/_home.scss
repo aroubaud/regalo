@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background: #FCFCFC;
 }
 
 h1, h2, h3, p {
@@ -40,12 +41,19 @@ h1, h2, h3, p {
   align-items: center;
 }
 
+#new_user .form-group {
+  display: block;
+  width: 400px;
+}
+
 .form-control {
   height: 35px;
-  width: 300px;
+  width: 400px;
   background: transparent;
   border: 1px solid black;
+  border-radius: 3px;
 }
+
 
 .form-control::-webkit-input-placeholder {
   color: white;
@@ -53,7 +61,7 @@ h1, h2, h3, p {
 }
 
 .form-control:focus {
-  color: white;
+  color: black;
   background: transparent;
   border: 1px solid white;
 }
@@ -61,7 +69,7 @@ h1, h2, h3, p {
 .button {
   background: white;
   color: black;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 3px;
   height: 35px;
   width: 80px;
@@ -100,7 +108,14 @@ h1, h2, h3, p {
 
 a {
   text-align: center;
-  padding: 5px;
+  // padding: 5px;
+  color: black;
+
+}
+
+a:hover {
+  text-decoration: none;
+  color: #393E46;
 }
 
 .chatbot {
