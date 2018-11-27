@@ -57,10 +57,10 @@ GIFTS = [
   { name: 'timberland shoes', description: 'Timberland Teddy Fleece Waterproof ', price: 140, image:"women_shoes", sku: "shoes_01" },
   { name: 'wind chimes', description: 'Outdoor Living Wind Chimes Yard Garden Tubes Bells Copper Home Craft Decor Gifts', price: 10, image: "wind_chimes", sku: "wind_chime_01"},
   { name: 'art glass', description: 'Purple Yellow Flower Art Glass Bird Bath Feeder NEW garden centerpiece bowl', price: 75, image: "birdbath", sku: "birdbath_01"},
-  { name: 'Hammock', description: 'Sunnydaze 2-Person Quilted Spreader Bar Hammock and 12-Foot Stand - Melon Stripe', price: 150, image:"hammock", sku: "hammock_01"},
-  { name: 'Bamboo MUG', description: 'STAINLESS STEEL Coffee & Tea Present,Travel', price: 30, image: "mugbamboo", sku: "mug_02"},
-  { name: 'Christmas Bowl', description: 'Non-alcoholic yet full flavored red wine Fermented and aged in the traditional red wine method Alcohol is gently removed ', price: 20, image:"glass", sku: "bowl_01" },
-  { name: 'Shallow Bowl', description:'Intricately woven antique gold-tone a beautifully striking addition to your tabletop. ', price: 160, image:"Shallow_Bowl", sku: "bowl_02"},
-  { name: 'Canon Camera', description:'Canon EOS 200D 24.2 MP Digital SLR Camera with 18-55mm EF-S f/3.5-5.6 Lens ', price: 60, image:"cannon", sku: "camera_02"},
+  { name: 'hammock', description: 'Sunnydaze 2-Person Quilted Spreader Bar Hammock and 12-Foot Stand - Melon Stripe', price: 150, image:"hammock", sku: "hammock_01"},
+  { name: 'bamboo MUG', description: 'STAINLESS STEEL Coffee & Tea Present,Travel', price: 30, image: "mugbamboo", sku: "mug_02"},
+  { name: 'christmas Bowl', description: 'Non-alcoholic yet full flavored red wine Fermented and aged in the traditional red wine method Alcohol is gently removed ', price: 20, image:"glass", sku: "bowl_01" },
+  { name: 'shallow Bowl', description:'Intricately woven antique gold-tone a beautifully striking addition to your tabletop. ', price: 160, image:"Shallow_Bowl", sku: "bowl_02"},
+  { name: 'canon Camera', description:'Canon EOS 200D 24.2 MP Digital SLR Camera with 18-55mm EF-S f/3.5-5.6 Lens ', price: 60, image:"cannon", sku: "camera_02"},
 ]
 
