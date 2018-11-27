@@ -1,11 +1,64 @@
 
 <%= simple_form_for [@gift, @order] do |f| %>
-  <%= f.input :address %>
+  <%= f.input :address, input_html: { id:"autocomplete" } %>
+  <!-- add street -->
   <%= f.input :unit %>
-  <%= f.input :postal_code %>
-  <%= f.input :city %>
-  <%= f.input :province %>
-  <%= f.input :country, :as => :string %>
+  <%= f.input :postal_code, input_html: { id: "postal_code" } %>
+  <%= f.input :city, input_html: { id:"locality" }%>
+  <%= f.input :province, input_html: { id: "administrative_area_level_1" } %>
+  <%= f.input :country, :as => :string, input_html: { id: "country" } %>
   <%= f.input :phone_number %>
   <%= f.button :submit, class: "shipping_button" %>
 <% end %>
+
+<script>
+    
+  var placeSearch, autocomplete;
+  var componentForm = {
+    locality: 'long_name',
+    administrative_area_level_1: 'short_name',
+    country: 'long_name',
+    postal_code: 'short_name'
+  };
+
+  document.getElementById("new_order").onkeypress = function(e) {
+    var key = e.charCode || e.keyCode || 0;     
+    if (key == 13) {
+      e.preventDefault();
+    }
+  }
+
+  function initAutocomplete() {
+    // Create the autocomplete object, restricting the search to geographical
+    // location types.
+    autocomplete = new google.maps.places.Autocomplete(
+        /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+        {types: ['geocode']});
+
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', fillInAddress);
+  }
+
+  function fillInAddress() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
+
+    for (var component in componentForm) {
+      document.getElementById(component).value = '';
+      document.getElementById(component).disabled = false;
+    }
+
+    // Get each component of the address from the place details
+    // and fill the corresponding field on the form.
+    for (var i = 0; i < place.address_components.length; i++) {
+      var addressType = place.address_components[i].types[0];
+      if (componentForm[addressType]) {
+        var val = place.address_components[i][componentForm[addressType]];
+        document.getElementById(addressType).value = val;
+      }
+    }
+  }  
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&libraries=places&callback=initAutocomplete" async defer></script>
