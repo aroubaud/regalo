@@ -1,6 +1,23 @@
-<h1>Order</h1>
+<!-- <h1>Order</h1>
 <ul>
   <li>Status: <%= @order.state %></li>
   <li>Item: <%= @order.gift_sku %></li>
   <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
-<ul>
+<ul> -->
+<div class="order-details">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <%= cl_image_tag @gift.image, id: 'imgift' %>
+      </div>
+      <div class="col-xs-6">
+        <h1 id= "giftname">Thank you for your order!</h1>
+        <p><strong>Amount: <%= humanized_money_with_symbol(@gift.price) %></strong></p>
+        <p><strong>Order information:</strong></p>
+        <p><%= @gift.name.capitalize %></p>
+        <p><%= @gift.description.capitalize %></p>
+        <p><strong>Your order confirmation has been sent to your email!</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
