@@ -12,9 +12,20 @@
 img {
  vertical-align: left;
  padding: 0px;
-
 }
 
+#imgift {
+  width: 500px;
+  margin-top: 10px;
+}
+
+#giftname {
+  margin-top: 1px;
+}
+
+.gift-details {
+  margin-top: 100px;
+}
 // .container-gift-details {
 // display: flex;
 // align-items: center;
@@ -22,7 +33,7 @@ img {
 // justify-content: space-between;
 // }
 
-.gift-image {
-  height: 450px;
-  background-repeat: no-repeat;
-}
+// .gift-image {
+//   height: 450px;
+//   background-repeat: no-repeat;
+// }
