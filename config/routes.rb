@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   mount Facebook::Messenger::Server, at: 'bot'
 
   resources :gifts, only:[:show] do
-    resources :orders, only: [:new, :create]
+    resources :orders, only: [:new, :create, :show]
   end
 
   resources :orders, only: [:show] do
