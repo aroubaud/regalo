@@ -65,6 +65,14 @@
       }
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    button = document.querySelector("button.stripe-button-el");
+    button.classList.remove('stripe-button-el');
+    button.classList.add('btn');
+    button.classList.add('primary');
+  });
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&libraries=places&callback=initAutocomplete" async defer></script>
