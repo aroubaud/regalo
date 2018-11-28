@@ -1,5 +1,5 @@
 
-<%= simple_form_for [@gift, @order] do |f| %>
+<%= simple_form_for @order, url: gift_payments_path(@gift) do |f| %>
   <%= f.input :address, input_html: { id:"autocomplete" } %>
   <!-- add street -->
   <%= f.input :unit %>
@@ -8,11 +8,17 @@
   <%= f.input :province, input_html: { id: "administrative_area_level_1" } %>
   <%= f.input :country, :as => :string, input_html: { id: "country" } %>
   <%= f.input :phone_number %>
-  <%= f.button :submit, class: "shipping_button" %>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Gift"
+    data-email="<%= current_user.email %>"
+    data-description="Gift <%= @order.gift_sku %>"
+    data-amount="<%= @order.amount_cents %>"
+    data-currency="<%= @order.amount.currency %>"></script>
 <% end %>
 
 <script>
-    
+
   var placeSearch, autocomplete;
   var componentForm = {
     locality: 'long_name',
@@ -22,7 +28,7 @@
   };
 
   document.getElementById("new_order").onkeypress = function(e) {
-    var key = e.charCode || e.keyCode || 0;     
+    var key = e.charCode || e.keyCode || 0;
     if (key == 13) {
       e.preventDefault();
     }
@@ -58,7 +64,7 @@
         document.getElementById(addressType).value = val;
       }
     }
-  }  
+  }
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&libraries=places&callback=initAutocomplete" async defer></script>
