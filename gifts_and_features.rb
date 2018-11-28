@@ -62,5 +62,11 @@ GIFTS = [
   { name: 'Christmas Bowl', description: 'Non-alcoholic yet full flavored red wine Fermented and aged in the traditional red wine method Alcohol is gently removed ', price: 20, image:"glass", sku: "bowl_01" },
   { name: 'Shallow Bowl', description:'Intricately woven antique gold-tone a beautifully striking addition to your tabletop. ', price: 160, image:"Shallow_Bowl", sku: "bowl_02"},
   { name: 'Canon Camera', description:'Canon EOS 200D 24.2 MP Digital SLR Camera with 18-55mm EF-S f/3.5-5.6 Lens ', price: 60, image:"cannon", sku: "camera_02"},
+  { name: 'Kids Car Black', description:'BCP 12V Kids Remote Control Ride-On Car w/ Lights, MP3, AUX', price: 60, image:"kids_car", sku: "toy_1"},
+  { name: 'Kids Car Pink', description:'BCP 12V Kids Ride-On Truck Car Toy w/ 3 Speeds, LED Lights, Remote Control, Aux', price: 250, image:"kids_car_pink", sku: "toy_2"},
+  { name: 'Board Game', description:'Harry Potter Hogwarts Battle A Cooperative Deck Building Board Game', price: 40, image:"board_game", sku: "toy_3"},
+  { name: 'Monopoly', description:'MONOPOLY Fortnite Edition Board Game Ages 13 and up', price: 20, image:"monopoly", sku: "toy_4"},
+  { name: 'R2-D2', description:'Star Wars Littlebits The Last Jedi R2-D2 Droid Inventor Kit Little Bits', price: 50, image:"r2_d2", sku: "toy_5"},
+  { name: 'Dollhouse', description:'KidKraft Glamorous Sparkle Mansion Curved Roof Dollhouse & Furniture', price: 110, image:"dollhouse", sku: "toy_6"},
 ]
 
