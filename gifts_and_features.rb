@@ -131,5 +131,4 @@ GIFTS = [
   { name: "Dash Compact Air Fryer", description: "By using air rather than oil, this kitchen appliance will cut back on fat by 75%, so they can grill, steam, and fry everything from Brussels sprouts to french fries. We love this aqua color, but this compact model is also available in black, gray, red, or white for a trendy touch to any kitchen.", price: 60, image: "Dash_Air_Fryer", sku: "Fryer_01"},
   { name: "LUX Essentials Whiskey Diamonds", description: "Dazzle whiskey, wine, or cocktails with these diamonds that'll keep it cool without watering down that liquid gold. Punky in pink cosmos and handsome in bourbon-based cocktails, these stones will be a fantastic addition to anyone's home bar.", price: 17, image: "Whiskey_Stones", sku: "Whiskey_01"},
   { name: "Leatherman Signal Multitool", description: "If you know someone with a reputation for fixing things up, give him a Leatherman multitool to add to his toolbox. He'll appreciate how easy it is to switch it up when he's working on a project that requires different tools to get the job done.", price: 110, image: "leatherman-multi-tool", sku: "Tool_01"}
-
 ]
