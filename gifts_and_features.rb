@@ -25,7 +25,7 @@ FEATURES = [
   { name: 'Officeparty' },
   { name: 'Anniversary' },
   { name: 'Housewarming' },
-  { name: 'Practicality' },
+  { name: 'Practicality' }
 ]
 
 GIFTS = [
