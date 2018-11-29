@@ -24,7 +24,7 @@ Bot.on :message do |message|
   case fb_user.step
   when 0
     message.mark_seen
-    message.reply(text: "Hey there! 👋 My name is Rose - I'm here to help you find the right gift for your next event 🎁")
+    message.reply(text: "Hey there! 👋 My name is Rose - I'm here to help you find the perfect gift for your next event 🎁")
     message.typing_on
     message.reply(text: "Let's start with your maximum budget so you don't break the bank 💳 Please type a number")
     fb_user.step += 1
@@ -297,7 +297,7 @@ Bot.on :message do |message|
     answer_8 = fb_user.messages.where(question_id: 8)[0].text
 
     ### Filter gifts by budget ###
-    gifts = Gift.where("price_cents < ?", budget * 100)
+    gifts = Gift.where("price_cents <= ?", budget * 100)
 
     ### Answers score ###
 

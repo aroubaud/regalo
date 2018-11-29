@@ -3,7 +3,7 @@ import Typed from 'typed.js';
 function loadDynamicBannerText() {
   if (document.getElementById("banner-typed-text")) {
     new Typed('#banner-typed-text', {
-      strings: ["birthdays", "house warmings", "Christmas", "office parties", "weddings", "house parties", "baby showers"],
+      strings: ["birthdays", "parties", "anniversaries", "weddings", "graduations", "babyshowers", "Christmas", "housewarmings", "office parties"],
       typeSpeed: 80,
       loop: true
     });
