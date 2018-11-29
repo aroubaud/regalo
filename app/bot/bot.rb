@@ -297,7 +297,7 @@ Bot.on :message do |message|
     answer_8 = fb_user.messages.where(question_id: 8)[0].text
 
     ### Filter gifts by budget ###
-    gifts = Gift.where("price_cents < ?", budget * 100)
+    gifts = Gift.where("price_cents <= ?", budget * 100)
 
     ### Answers score ###
 
