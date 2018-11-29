@@ -39,7 +39,7 @@ GIFTS = [
    Breathable fabric lining offers a great in-shoe feel', price: 100, image: "running_shoes1", sku: "nike_shoe_01" },
   { name: 'Wine bottles', description: 'Ready to drink  Apothic Wines', price: 20, image:"levinrouge", sku: "wine_01" },
   { name: 'Sports tickets', description:'tickets for hockey or basketball or soccer Game', price: 100, image:"ticket", sku: "ticket_01" },
-  { name: 'Ps4 wireless controller', description:'The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play', price: 60, image:"starwars_toy", image:"wireless_controller", sku: "ps4_wireless_01" },
+  { name: 'Ps4 wireless controller', description:'The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play', price: 60, image:"wireless_controller", sku: "ps4_wireless_01" },
   { name: 'Winter gloves', description: 'Windproof Polyester, Insulate Thinsulate, Waterproof', price: 40, image:"ganghiver", sku: "gloves_01" },
   { name: 'Trendy warm Beanie', description: 'Hand wash only, do not bleach', price: 20, image:"beanie1", sku: "beanie_01" },
   { name: 'Temparature control Mug', description: 'keep your water, beer, or favorite drink on lock', price: 30, image:"mug", sku: "mug_01" },
