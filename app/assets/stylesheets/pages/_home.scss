@@ -8,6 +8,11 @@ h1, h2, h3, p {
   font-family: Roboto, Raleway, Helvetica, sans-serif;
 }
 
+a:focus {
+  color: black;
+  text-decoration: none;
+}
+
 
 .banner {
   height: 100vh;
