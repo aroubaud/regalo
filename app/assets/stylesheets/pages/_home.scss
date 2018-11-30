@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
   background: #FCFCFC;
 }
 
-h1, h2, h3, p {
-  font-family: Roboto, Raleway, Helvetica, sans-serif;
-}
+// h1, h2, h3, p {
+//   font-family: Roboto, Raleway, Helvetica, sans-serif;
+// }
 
 a:focus {
   color: black;
@@ -23,22 +23,28 @@ a:focus {
   padding-left: 30px;
 }
 
-.banner-content h1 {
-  font-weight: bold;
-  font-size: 70px;
-  margin-top: 70px;
-  margin-bottom: 50px;
-}
+.banner-content {
 
-.banner-content h3 {
-  font-weight: medium;
-  font-size: 38px;
-  padding: 20px 0;
-}
+  h1 {
+     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
 
-.banner-content p {
-  font-size: 12px;
-  margin-top: 100px;
+   h3 {
+     font-family: 'Roboto', sans-serif;
+    font-weight: medium;
+    font-size: 38px;
+    padding: 20px 0;
+  }
+
+   p {
+     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin-top: 100px;
+  }
 }
 
 .form-group {
@@ -90,6 +96,7 @@ a:focus {
 }
 
 .button_start {
+  font-family: 'Roboto', sans-serif;
   background: white;
   color: black;
   border: 1px solid white;
