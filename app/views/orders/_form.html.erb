@@ -2,7 +2,7 @@
 <%= simple_form_for @order, url: gift_payments_path(@gift) do |f| %>
   <%= f.input :address, input_html: { id:"autocomplete" } %>
   <!-- add street -->
-  <%= f.input :unit %>
+  <%# f.input :unit %>
   <%= f.input :postal_code, input_html: { id: "postal_code" } %>
   <%= f.input :city, input_html: { id:"locality" }%>
   <%= f.input :province, input_html: { id: "administrative_area_level_1" } %>
@@ -17,6 +17,7 @@
     data-currency="<%= @order.amount.currency %>"></script>
 <% end %>
 
+<%= content_for :after_js do %>
 <script>
 
   var placeSearch, autocomplete;
@@ -76,3 +77,5 @@
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_API_KEY"] %>&libraries=places&callback=initAutocomplete" async defer></script>
+
+<% end %>

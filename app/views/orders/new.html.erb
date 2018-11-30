@@ -1,3 +1,14 @@
-<h1 align="center">Please complete your order</h1>
-<%= render "form", order: @order %>
+
+<div class="gift-details">
+
+  <%= cl_image_tag @gift.image, id: 'imgift' %>
+
+
+  <div class="gift-left-details custom-form">
+    <h1 align="center">Please complete your order</h1>
+    <%= render "form", order: @order %>
+  </div>
+
+</div>
+
 
